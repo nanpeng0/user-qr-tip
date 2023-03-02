@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    username: root
+    password: Pichainmall@2022
+    url: jdbc:mysql://119.13.109.190:3306/commodity_0?characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+server:
+  port: 3200
+logging:
+  level:
+    com.atguigu.gulimall: debug
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+
