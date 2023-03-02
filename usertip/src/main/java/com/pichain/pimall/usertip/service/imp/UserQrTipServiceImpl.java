@@ -25,7 +25,7 @@ public class UserQrTipServiceImpl extends ServiceImpl<UserQrTipMapper, UserQrTip
     @Override
     public R selectTipStatusByUserId(String userId) {
         if (!StringUtils.isEmpty(userId)){
-            // 根据userid查找提示状态（01）
+            // 根据userid查找提示状态
             UserQrTipPO userinfo = this.baseMapper.selectOne(new QueryWrapper<UserQrTipPO>().eq(USER_ID, userId));
             if (userinfo!=null ){
                 return new R(SUCCESS_CODE,"access successful!",userinfo.getStatus());
